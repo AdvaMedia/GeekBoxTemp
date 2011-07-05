@@ -1,0 +1,9 @@
+= form_for :contact, :url=>postmail_path do |f|
+	- unless flash[:notice].blank?
+		%h1.message.yeah= raw flash[:notice]
+	- if @contact.errors.count > 0
+		%h1.message.fail= raw t('register_fail')
+	= f.text_field :mail, :type=>"email", :class=>"mail", :placeholder=>t('mail_place_holder'), :required=>"required"
+	\  
+	%button.button{:type=>"submit", :value=>t('submit_val')}= t('submit')
+	= render 'shared/counter'

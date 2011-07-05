@@ -1,0 +1,10 @@
+%p#notice= notice
+
+.song
+	= "#{@song.author} - #{@song.title}"
+	\|
+	= link_to 'play', @song.content.url
+
+= link_to 'Edit', edit_song_path(@song)
+\|
+= link_to 'Back', songs_path

@@ -1,0 +1,16 @@
+%p.wtf
+	%abbr{:title=>t('wtf.title')}= t('wtf.wtf')
+	%span.magic
+		,
+		%strong
+			= t('wtf.vopros')
+		%br
+		%span
+			= t('wtf.answer1')
+			%del{:title=>raw(t('wtf.blackjack1'))}
+				= t('wtf.blackjack2')
+			= t('wtf.answer2')
+			%ins{:title=>t('wtf.shop1'), :style=>"text-decoration:none"}><
+				= t('wtf.shop2')
+			= " "
+			= "#{t('wtf.city')}."

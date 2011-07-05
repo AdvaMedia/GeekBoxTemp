@@ -1,0 +1,88 @@
+
+/* Both IE styles		 
+------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------ */
+
+/* исправляем кнопки для IE   
+   www.viget.com/inspire/styling-the-button-element-in-internet-explorer/ */
+	button {  width: auto; overflow: visible; }
+
+legend { margin-left:-.5em; }
+select { padding:0; }
+input,button,textarea,select { font-size: 100%; }
+
+/* IE 7 Hacks		[class].class-name {...}      
+------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------ */
+
+/* IE hack 120 dpi fonts — Set id to any existing element */
+[class]#header {
+  scrollbar-track-color:expression(
+  this.runtimeStyle.scrollbarTrackColor = "#fff",
+  ((screen.deviceXDPI/screen.logicalXDPI) == 1) ? (document.body.style.fontSize = 1/(screen.logicalYDPI/96) +'em') : false
+  );
+}
+
+
+/* negative margins */
+
+[class].f-right { clear:left; }
+[class].f-left { clear:right; }
+
+/* Columns */
+
+[class].w-5, 
+[class].w-10, 
+[class].w-15, 
+[class].w-20, 
+[class].w-25, 
+[class].w-30, 
+[class].w-35, 
+[class].w-40, 
+[class].w-45, 
+[class].w-50, 
+[class].w-55, 
+[class].w-60, 
+[class].w-65, 
+[class].w-70, 
+[class].w-75, 
+[class].w-80, 
+[class].w-85, 
+[class].w-90, 
+[class].w-95, 
+[class].w-100, 
+[class].w-33, 
+[class].w-66, 
+[class].w-38, 
+[class].w-62 { /* внимание: */ clear: right;   }
+
+[class].corners, 
+[class].columns, 
+[class].layout-box { zoom: 1; } /* hasLayout ON */
+[class].container { overflow:hidden; zoom: 1;  }
+
+
+/* Custom form styles */
+
+[class].i-checkbox input, 
+[class].i-radio input { margin: -7px 0 0 -3px;  }
+
+
+/* RUBRIKS */
+		
+[class].tickets li a { width:284px; }
+[class].tickets li .description { left:0; width:264px; }
+
+/* Emulation :after  and :before */
+
+/*[class].container { 
+   z-index: expression(
+   runtimeStyle.zIndex = 1,
+   innerHTML = "" + innerHTML + "<i class='cc'></i>"
+  );
+}
+*/
+
+/* IE 6 Hacks		* html* .class-name {...}
+------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------ */

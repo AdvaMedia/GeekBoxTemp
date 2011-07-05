@@ -1,0 +1,49 @@
+a { 
+  color:#15afed; 
+  transition: color 0.1s linear 0s; 
+  -moz-transition: color 0.1s linear 0s; 
+  -webkit-transition: color 0.1s linear 0s; 
+  -o-transition:color 0.1s linear 0s;
+   }
+a:hover { color:#DC005F; }
+html { 
+  min-width:980px; 
+  min-height:100%; 
+  height:100%; 
+  position:relative;
+  background:#fafafa url(/assets/box.jpg) 90% -30px no-repeat;
+}
+body { 
+  color:#4E5156; font-family:"Helvetica Neue",Helvetica,Arial,FreeSans,"Liberation Sans","Nimbus Sans L",sans-serif; 
+  background-image: url(/assets/diagonal-gradient.png);
+  background-repeat:no-repeat;
+  background-position:50% 0;
+  background-size: 100% 100%;
+}
+section { width:800px; margin:auto; }
+header { padding-top:3em; position:relative;  }
+  .logo { overflow:hidden; position:relative; left: -1.8333em; }
+  h1.logo { width:8.6333em; /* 259px/30px */ }
+  h1.logo a, a.logo { display:block;}
+  a.logo { width:18.5em; /* 259px/14px */ }
+  .logo img { margin:0; max-width:100%; height:auto; }
+  .logo span { position:absolute; top:-500em; }
+  .wtf { max-width:230px; position:absolute; right:8em; top:4.2em; padding:.5em 1em; background:#fafafa; background:rgba(248, 255, 181,.9); color:#000; }
+  .wtf .magic { display:none;  }
+  .wtf:hover .magic { display:inline; }
+  .twitter,.facebook { position:absolute; top:4.2em; display:block; overflow:hidden; padding:.5em 1em; text-decoration:none; }
+  .twitter { right:0; background:url(/assets/twitter.png)0 50% no-repeat; padding-left:30px; color:#b3b3b3; } 
+  .hello { font-family: 'Lobster', arial, serif; text-shadow:0 1px #fff; background:#fafafa; background:rgba(250,250,250,.8); line-height:1.275em; display:inline; }
+  form, .count_div { margin:0; padding:3em 0; position:relative; }
+  ::-webkit-input-placeholder  { color:#ddd; }
+  input:-moz-placeholder { color:#ddd; }
+input.mail { font-size:2em; width:60%; }
+.yeah { color:#DA06A1; }
+.fail { color:red; }
+
+
+.counter { position:absolute; right:0; top:2.8em; text-align:center; color:#fff; text-shadow: 1px 1px #777; }
+.counter .num { font-size:3.5em; display:block; line-height:1; }
+.button{ font-size:2em; font-family: 'Lobster', arial, serif; text-shadow:0 1px #fff; vertical-align: middle; }
+
+#sm2-container {height:1px; width:1px;}

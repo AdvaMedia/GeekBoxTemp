@@ -1,0 +1,458 @@
+/*
+Этот файл содержит труды нескольких разработчиков.
+Мы уважаем их работу и вклад в развитие современных технологий.
+                                                   — Adva Media
+
+Css-Framework — Author: Aleksej Romanovskij (http://css-framework.ru)
+Blueprint: Reset CSS  (http://www.blueprintcss.org/)
+CSS font matching: Windows, Mac and Linux (http://my.opera.com/area42/blog/css-font-matching-windows-mac-and-linux) 
+120 dpi fonts size — Author: Zenich Igor (http://habrahabr.ru/blogs/css/42794/)
+
+*/
+
+/* CSS RESET
+------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------ */
+html {margin:0;padding:0;border:0;}
+body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, code, del, dfn, em, img, q, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, dialog, figure, footer, header, hgroup, nav, section {margin:0;padding:0;border:0;font-weight:inherit;font-style:inherit;font-size:100%;font-family:inherit;vertical-align:baseline; background:transparent; }
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {display:block;}
+body {line-height:1.5; }
+table {border-collapse:separate;border-spacing:0;}
+caption, th, td {text-align:left;font-weight:normal;float:none !important;}
+table, th, td {vertical-align:middle;}
+blockquote:before, blockquote:after, q:before, q:after {content:'';}
+blockquote, q {quotes:"" "";}
+a img {border:none;}
+nav ul { list-style:none; }
+/*:focus {outline:0;}*/
+
+/* GLOBAL STYLES
+------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------ */
+
+/* browser hack 120 dpi fonts size (http://habrahabr.ru/blogs/css/42794/) */
+html { font-size: 100%; } /* here we write the size of your font by default */
+@media all and (min-resolution: 120dpi) {
+    html { font-size: 80%; } /* proportionally reduce the font size: 68.75 / (120/96) */
+    html, x:-moz-any-link { font-size: 100%; } /* there must be the size of the default */
+} #for-opera927 {/* don't remove! */}
+
+body { font-family:"Helvetica Neue",Helvetica,Arial,FreeSans,"Liberation Sans","Nimbus Sans L",sans-serif; font-size:.875em; line-height:1.5em; /* 21px/14px=1.5*/ } /* Windows, Mac and Linux SAFE FONTS */
+
+
+/* TYPOGRAFY
+------------------------------------------------*/
+
+/* Эти селекторы должны быть разделены
+Убираем text-shadow twitter.com/miketaylr/status/12228805301
+Плюс: розовенько */
+::-moz-selection{ background:#39C; color:#fff; }
+::selection { background:#39C; color:#fff; } 
+
+/* 1. Links */
+
+a { color:#09659B; }
+a:focus { }
+a:visited { }
+a:hover { color:#cc0033; }
+a:active { }
+a[rel~="nofollow"]::after { }
+a[rel~="tag"]::after { }
+a.pseudo { text-decoration:none; border-bottom:1px dotted; }
+a.pseudo:hover {  }
+
+/* 2. Others */
+
+i, em { font-style: italic; }
+b, strong { font-weight:700; }
+big {
+  font-size: 1.2143em; /* 17px */ 
+	line-height: 1.2353em; /* 21px */ 
+	}	
+small { 
+	font-size: .8571em; /* 12px */ 
+	line-height: 1.75em; /* 21px */ 
+	}
+acronym, abbr { border-bottom: 1px dotted #aaa; cursor:help; padding:0 .1em; letter-spacing:0.05em; font-family:"Helvetica Neue",Helvetica,Arial,FreeSans,"Liberation Sans","Nimbus Sans L",sans-serif; }
+acronym:hover, abbr:hover { background-color: #9CF; }
+cite, q { font-family: Georgia,"Bitstream Charter","Century Schoolbook L","Liberation Serif",Times,serif; font-style:italic;}
+cite { color:#969696; }
+q { color: #008000;} q:before { content: '\00AB';} q:after { content: '\00BB';}
+code { padding: 0 2px; color:#880000; }
+mark { background-color:#ff9; color:#000; font-style:italic; font-weight:bold; }
+var { font-style:italic;}
+ins { text-decoration:underline; }
+del { text-decoration:line-through; }
+kbd, samp { font-weight:700;}
+samp { color:red;}
+sup, sub { position: relative; vertical-align:baseline; } sup { top: -.4em; } sub { bottom: -.3em; }
+tt { }
+
+pre, code, kbd, samp, var, tt { /*font-family: "Courier New", Courier, monospace;*/ }
+pre { /* www.pathf.com/blogs/2008/05/formatting-quoted-code-in-blog-posts-css21-white-space-pre-wrap/ */
+padding: 1em; 
+white-space: pre; /* CSS2 */
+white-space: pre-wrap; /* CSS 2.1 */
+white-space: pre-line; /* CSS 3 (and 2.1 as well, actually) */
+word-wrap: break-word; /* IE */
+}
+
+
+/* Block Semantic Text Decoration
+------------------------------------------------*/
+
+p, table, blockquote, pre, .columns, img, hr, ul, ol, dl { margin: 0 0 1.5em; }
+
+pre { box-shadow: 0 0 15px #9D9D9D; -moz-box-shadow: 0 0 15px #9D9D9D; -webkit-box-shadow: 0 0 15px #9D9D9D; color:#00837E; padding:1.5em; }
+blockquote {
+	background: url(/i/blockquote.png) no-repeat scroll 0 1.6em transparent;
+    color: #666666;
+    display: block;
+    font: italic 1em/1.5em Georgia,"Bitstream Charter","Century Schoolbook L","Liberation Serif",Times,serif;
+    margin-left: 30%;
+    padding: 1.5em 0 1.5em 3em; 
+	}
+
+/* Lists */	
+	
+ul, ol { padding-left:3em; margin-left:0; }
+ul li, ol li { margin-bottom: .75em; }
+ul ul, ol ol { margin:.375em auto; }
+ul ul li, ol ol li { margin:.375em auto; }
+	ul li { list-style-type:disc; }
+	ul li li { list-style-type:circle; }
+	ul li li li { list-style-type:square; }
+	ol li { list-style-type: none; }
+	ol { counter-reset: list1; }
+	ol li:before { counter-increment: list1; content: counter(list1) ". "; }
+	ol ol { counter-reset: list2; }
+	ol ol li:before { counter-increment: list2; content: counter(list1) "." counter(list2) ". "; }
+	ol ol ol { counter-reset: list3; }
+	ol ol ol li:before { counter-increment: list3; content: counter(list1) "." counter(list2) "." counter(list3) ". "; }
+
+dl { }
+dl dt { margin-left:0; font-weight: bold; }
+dl dd { padding-left: 3em; margin-bottom: 1.5em; }
+
+nav ul { list-style:none; margin: 0; padding:0; }
+			
+/* Content elements
+------------------------------------------------*/
+
+/* 1. Headings */
+
+h1, h2, h3, h4, h5, h6 { font-weight:normal; color:#111; position:relative; }
+
+/* Calculate margins on http://drewish.com/tools/vertical-rhythm */
+
+h1, .like-h1 { 
+  font-size: 2.1429em; /* 30px */ 
+	line-height: 1.4em; /* 42px */ 
+	margin-bottom: .7em; 	
+	}
+h2, .like-h2 {
+	font-size: 1.8571em; /* 26px */ 
+	line-height: 1.6154em; /* 42px */ 
+	margin-bottom: .8077em; 
+	}
+h3, .like-h3 { 
+	font-size: 1.7143em; /* 24px */ 
+	line-height: 1.75em; /* 42px */ 
+	margin-bottom: .875em; 
+	}
+h4, .like-h4 { 
+	font-size: 1.5714em; /* 22px */ 
+	line-height: 1.9091em; /* 42px */ 
+	margin-bottom: .9545em;  	
+	}
+h5, .like-h5 { 
+	font-size: 1.4286em; /* 20px */ 
+	line-height: 1.05em; /* 21px */ 
+	margin-bottom: 1.05em;    
+	}
+h6, .like-h6 { 
+	font-size: 1.2857em; /* 18px */ 
+	line-height: 1.1667em; /* 21px */
+	 margin-bottom: 1.1667em;  
+	}
+.like-h7 { 
+  font-size: 1.2143em; /* 17px */ 
+	line-height: 1.2353em; /* 21px */ 
+	margin-bottom: 1.2353em;   
+	}	
+	
+h1 img, h2 img, h3 img, h4 img, h5 img, h6 img {margin:0;}
+
+
+/* 2. Paragraphs */
+
+.highlight, .info, .note, .important, .warning { margin-bottom:1.5em; padding:1.5em;}
+p.dimmed, .dimmed { color:#9BAAC1; }
+p.highlight, .highlight { color:#FF6600; background:#FFFBF5; margin:0 -1.5em 1.5em -1.5em;  }
+p.info, .info { background:#9BAAC1; color:#fff; }
+p.note, .note { background:#f7f7f7; border-left:5px solid #0099cc; font: italic 1em/1.5em Georgia,"Bitstream Charter","Century Schoolbook L","Liberation Serif",Times,serif; color: #666; }
+p.important, .important { background:#FFFFEE;  color:#444400; }
+p.warning, .warning { background:#FFEEEE; color:#440000; }
+
+/* 3. Other */
+
+hr { background-color:#CAD2D9; height:1px; border-width:0px; clear:both;  }
+
+/* 4. Tables  */
+
+table { width:100%; border-collapse: collapse; caption-side:top; }
+table caption { font-variant:small-caps; }
+thead th { padding: 0.692em; /* 18px = line-heaight: 19px - 1px border-bottom */ background:#fff; color: #000; border-bottom: 2px #800 solid; font-weight:700; }
+th { padding:.7307em; /* line-heaight: 19px */ border-bottom: 1px solid #aaa; text-align: left; }
+td { padding:.7307em; /* line-heaight: 19px */ border-bottom: 1px solid #DEDEDE; }
+table.t-fixed { table-layout:fixed; }
+table.t-auto { width:auto; }
+table.t-null, table.t-null td, table.t-null th { border:none; padding:0; background:none; vertical-align: top; }
+
+/* 5. Images  */
+
+img { margin-bottom:1.5em; }
+a.show img { border:1px solid; }
+img.null-image { padding: 0!important; border: none!important; margin: 0!important; }
+img.f-left { margin-right: 1.5em; }
+img.f-right { margin-left: 1.5em; }
+img.f-left,img.f-right { position:relative; top:.375em; }
+
+
+/*	Columns
+------------------------------------------------*/
+
+.columns { width:100%; margin:0; }
+.w-5, .w-10, .w-15, .w-20, .w-25, .w-30, .w-35, .w-40, .w-45, .w-50, .w-55, .w-60, .w-65, .w-70, .w-75, .w-80, .w-85, .w-90, .w-95, .w-100, .w-33, .w-66, .w-38, .w-62 { float: left; }
+
+.col-content { padding-right: 6px; }
+.col-first { padding-left: 0!important; }
+.col-last { padding-right: 0!important; }
+
+.w-5, .width-5 { width: 5% }
+.w-10, .width-10 { width: 10% }
+.w-15, .width-15 { width: 15% }
+.w-20, .width-20 { width: 20% }
+.w-25, .width-25 { width: 25% }
+.w-30, .width-30 { width: 30% }
+.w-35, .width-35 { width: 35% }
+.w-40, .width-40 { width: 40% }
+.w-45, .width-45 { width: 45% }
+.w-50, .width-50 { width: 50% }
+.w-55, .width-55 { width: 55% }
+.w-60, .width-60 { width: 60% }
+.w-65, .width-65 { width: 65% }
+.w-70, .width-70 { width: 70% }
+.w-75, .width-75 { width: 75% }
+* html .w-75    { width:74.5%}
+.w-80, .width-80 { width: 80% }
+.w-85, .width-85 { width: 85% }
+.w-90, .width-90 { width: 90% }
+.w-95, .width-95 { width: 95% }
+.w-99, .width-99 { width: 99% }
+.w-100, .width-100 { width: 100% }
+
+.w-33,.width-33 { width: 33% }
+.w-66,.width-66 { width: 66% }
+
+.w-38,.width-38 { width: 38% }
+.w-62,.width-62 { width: 62% }
+
+
+/* Forms
+------------------------------------------------*/
+
+/* 1. Base form styles */
+
+form { margin-bottom:1.5em; font-family: "Helvetica Neue",Helvetica,Arial,FreeSans,"Liberation Sans","Nimbus Sans L",sans-serif; }
+fieldset { border:none; margin:1.5em 0; }
+legend {   font-size: 1.2308em; /* 16px */ line-height: 1.25em; /* 20px */ padding-bottom:1.25em; }
+label { display:inline-block;  font-weight:700; cursor:text; }
+input { vertical-align:middle; color:#777; font-family: "Helvetica Neue",Helvetica,Arial,FreeSans,"Liberation Sans","Nimbus Sans L",sans-serif; }
+input:focus { outline-color:#7cbdf0; color:#222; }
+/* курсор в виде руки для всех кликабельных элементов input */
+label[for], input[type=button], input[type=submit], button { cursor: pointer; }
+/* браузеры на webkit добавляют двухпиксельный отступ к элементам формы */ 
+button, input, select, textarea { margin: 0; }
+
+/* 2. Input, Textarea, Select, Radio, Check  */
+
+input[type="text"],
+input[type="search"],
+input[type="password"],
+input[type="email"],
+input[type="url"],
+input[type="tel"],
+textarea,
+select, 
+.chrome select,
+.ie select,
+.gecko select,
+.konqueror select,
+.safari3 select { 
+	border:1px solid #ddd; padding:.4495em;
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */ 
+	-moz-box-sizing: border-box; /* Firefox, other Gecko */ 
+	box-sizing: border-box; /* Opera/IE 8+ */ 
+	} /* with browser selector hack - opera bug */
+
+input[type="text"]:hover,
+input[type="search"]:hover,
+input[type="password"]:hover,
+input[type="email"]:hover,
+input[type="url"]:hover,
+input[type="tel"]:hover,
+textarea:hover, 
+select:hover { border-color:#bebebe; }
+  
+input[type="text"]:focus,
+input[type="search"]:focus,
+input[type="password"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="tel"]:focus,
+textarea:focus,
+select:focus { outline:none; border-color:#89CCFF; -moz-box-shadow:0 0 10px rgba(0, 141, 250, 0.3); box-shadow:0 0 10px rgba(0, 141, 250, 0.3); -webkit-box-shadow:0 0 10px rgba(0, 141, 250, 0.3);  }
+
+select {  vertical-align:middle; padding: 0.38em!important; }
+optgroup { font-weight:700; }
+option { font-weight:400; }
+textarea { overflow:auto; }
+
+/*CSS and HTML5 Forms*/
+  /*Pseudo classes*/
+  :required { }
+  :optional { }
+  :valid { }
+  :invalid { }
+  :default { }
+  :in-range { }
+  :out-of-range { }
+  :not()
+  /*Attribute selectors*/
+  [autofocus] { }
+  [autocomplete] { }
+  [list] { }
+  [placeholder] { }
+  [type=range] { /* and other types */ }
+  [multiple]
+  /*Specific Stylings*/
+  ::-webkit-input-placeholder { /* Style placeholder text */ }
+  :-moz-placeholder  { /* Style placeholder text */ }
+  [type=search] { -webkit-appearance: none; }
+  
+  
+/* 3. Custom form styles  */
+
+.f-row { margin-bottom:1.5em; }
+.f-row .f-row { margin-top:1em; }
+
+.i-text , .i-select { width:100%; }
+.f-row, .i-checkbox, .i-radio, .i-wrap, .adding-row { position:relative; }
+.i-checkbox input, .i-radio input { position: absolute; left: 0; top: 0.42em; margin: -4px 0 0; }
+.opera .i-checkbox input, .opera .i-radio input { top:.2em; }	/*opera hack*/
+.ie8 .i-checkbox input, .ie8 .i-radio input { padding:0; }	/*ie8 hack*/
+.i-checkbox label, .i-radio label { font-weight:400;  margin-bottom:.75em; margin-left:19px; cursor:default; }
+
+.i-help { color:#9BAAC1; font-size:.9em; display:block; margin:.4em 0;  }
+
+/* цвета для правильно/неправильно заполненных полей */
+
+input:valid, textarea:valid   {  }
+input:invalid, textarea:invalid {
+border-radius: 1px;
+-moz-box-shadow: 0px 0px 5px red;
+-webkit-box-shadow: 0px 0px 5px red;
+box-shadow: 0px 0px 5px red;
+}
+
+input[type="text"].i-invalid,
+textarea.i-invalid,
+select.i-invalid { background:url(/assets/invalid_line.png) 0 100% repeat-x; border:1px solid #CC3300; outline:none; }
+
+input[type="text"].i-invalid:focus,
+textarea.i-invalid:focus,
+select.i-invalid:focus { box-shadow:0 0 10px rgba(204, 51, 0, 0.3); -moz-box-shadow:0 0 10px rgba(204, 51, 0, 0.3); -webkit-box-shadow:0 0 10px rgba(204, 51, 0, 0.3); }
+
+.adding-row { margin:.75 0; }
+.add-row { }
+.delete-row { background: url(/assets/icons/cross.png) 50% 50% no-repeat;  }
+.row-control, .req  { position:absolute;}
+.row-control { width:20px; height:20px; right:-30px; top:2px; display:block; color:#fff; }
+.req { margin:0; color:#F63; font-size:2em; cursor:help; height:9px; width:9px; left:-.1153em; top:-.1153em; color:#F63; }
+
+
+/* 3. Form Buttons  */
+
+.button { cursor:pointer; overflow:visible; width:auto; }
+
+
+/* UTILITES
+------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------ */
+.hidden { display: none; }
+.show { display: block!important; }
+.vhidden { visibility:hidden; }
+.vshow { visibility:visible!important; }
+.no-margin { margin: 0!important; }
+  .no-margin-t { margin-top: 0!important; }
+  .no-margin-r { margin-right: 0!important; }
+  .no-margin-b { margin-bottom: 0!important; }
+  .no-margin-l { margin-left: 0!important; }
+  .no-margin-tb { margin-top: 0!important; margin-bottom: 0!important; }
+  .no-margin-lr { margin-left: 0!important; margin-right: 0!important; }
+.no-padding { padding: 0!important; }
+  .no-padding-t { padding-top: 0!important; }
+  .no-padding-r { padding-right: 0!important; }
+  .no-padding-b { padding-bottom: 0!important; }
+  .no-padding-l { padding-left: 0!important; }
+  .no-padding-tb { padding-top: 0!important; padding-bottom: 0!important; }
+  .no-padding-lr { padding-left: 0!important; padding-right: 0!important; }
+.no-bg { background: none!important; }
+.no-border { border: none!important; }
+.container:after, .columns:after, .floatbox:after { content: "."; display: block; height: 0; clear: both; visibility: hidden; }
+.img-repl { text-indent: -9999px; overflow: hidden; display: block; }
+.cc { clear: both; }
+.bold { font-weight:700; }
+.no-bold { font-weight:400; }
+.small { 	font-size: 0.8462em; /* 11px */ line-height: 1.8182em; /* 20px */}
+.em { font-style: italic; }
+.a-left { text-align: left; }
+.a-center { text-align: center; } p.a-center img { margin-bottom:0; }
+.a-right { text-align: right; }
+.a-just { text-align:justify; word-spacing:-1px; }
+.b-center {display:block; margin:0 auto 1.5em auto; text-align:center;}
+.f-left { display:inline; float:left; /*margin-bottom:0.15em;*/  }
+.f-right { display:inline; float: right; /*margin-bottom:0.15em;*/  }
+.icons a, .icon { padding: 1px 0 1px 22px; background-repeat: no-repeat; background-position: left center; }
+.italicus { font-family:Georgia,"Bitstream Charter","Century Schoolbook L","Liberation Serif",Times,serif; font-style:italic; }
+.pos-r { position:relative; }
+.pos-a { position:absolute; }
+.pos-top { top:0; }
+.pos-right { right:0; }
+.pos-bottom { bottom:0; }
+.pos-left { left:0; }
+
+/*
+* Правила для более отзывчивого дизайна Эти стили следуют за главными стилями, чтобы успешно их заменить.
+*/
+ 
+@media all and (orientation:portrait) { /* Стили для портретного режима */ }
+@media all and (orientation:landscape) {  /* Стили для альбомного режима */ }
+/* Хорошие (Grade-A) мобильные браузерв (Opera Mobile, iPhone Safari, Android Chrome) 
+На заметку: www.cloudfour.com/css-media-query-for-mobile-is-fools-gold/ */
+@media screen and (max-device-width: 480px) { /* Uncomment if you don't want iOS and WinMobile to mobile-optimize the text for you j.mp/textsizeadjust html { -webkit-text-size-adjust:none; -ms-text-size-adjust:none; } */ }
+
+/* стили для печати прямо в файле, чтобы избежать дополнительного HTTP запроса www.phpied.com/delay-loading-your-print-css/ */
+@media print {
+* { background: transparent !important; color: #444 !important; text-shadow: none !important; }
+a, a:visited { color: #444 !important; text-decoration: underline; }
+a:after { content: " (" attr(href) ")"; }
+abbr:after { content: " (" attr(title) ")"; }
+pre, blockquote { border: 1px solid #999; page-break-inside: avoid; }
+thead { display: table-header-group; } /* css-discuss.incutio.com/wiki/Printing_Tables */
+tr, img { page-break-inside: avoid; }
+@page { margin: 0.5cm; }
+p, h2, h3 { orphans: 3; widows: 3; }
+h2, h3{ page-break-after: avoid; }
+}

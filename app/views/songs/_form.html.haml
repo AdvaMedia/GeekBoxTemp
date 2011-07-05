@@ -1,0 +1,8 @@
+= semantic_form_for @song do |f|
+	= f.inputs do
+		= f.input :title
+		= f.input :author
+		= f.input :content, :as=>:file
+		
+	= f.buttons do
+		= f.commit_button

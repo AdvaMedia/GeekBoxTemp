@@ -1,0 +1,29 @@
+ru:
+  logo:
+    description: "Geekbox.ru &mdash; магазин в интернете. Саратов"
+    image:
+      title: "Geekbox.ru &mdash; магазин в интернете. Саратов"
+      alt: "Geekbox"
+  wtf:
+    title: "What The Fuck"
+    wtf: "WTF"
+    vopros: "что все это значит?"
+    answer1: "Да ничего особенного, просто собрались друзья и решили сделать свой маленький"
+    blackjack1: "с блекджеком и&hellip;"
+    blackjack2: "лунапарк"
+    answer2: " интернет–"
+    shop1: "интернет-магазин"
+    shop2: "магазинчик"
+    city: "в Саратове"
+  twitter:
+    url: "https://twitter.com/#!/geekbox_ru"
+    title: "Наш Тви"
+    name: "Twitter"
+  hello: "Привет, мы всё еще работаем над сайтом, так что зайди чуточку позже или оставь свою почту, а мы тебе обязательно сообщим и что-нибудь подарим, ок?"
+  register_ok: "Здорово, что ты с нами!<br /> Жди письма об открытии."
+  register_fail: "Такая электропочта уже есть *username*!"
+  mail_place_holder: "Например, vasya@pupkin.ru"
+  submit: "Отправить"
+  submit_val: "Жмак"
+  chelovek: "человеков <br />оставили email"
+  like2: "P.S. Every revolution needs a soundtrack"
