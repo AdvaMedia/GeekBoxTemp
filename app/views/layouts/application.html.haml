@@ -1,4 +1,5 @@
 !!! 5
+= render 'shared/bender'
 %html
 	%head
 		= render 'shared/header'
@@ -9,3 +10,4 @@
 				= render "shared/wtf"
 				= link_to t('twitter.name') ,t('twitter.url'), :title=>t('twitter.title'), :class=>"twitter"
 			= yield
+		= render 'shared/analitika'
