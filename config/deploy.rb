@@ -21,8 +21,7 @@ set :rails_env, "production"
 
 # Настройки репозитория
 set :scm, :git
-set :repository, "git://github.com/AdvaMedia/tisn.git"
-set :branch, "faq"
+set :repository, "git@github.com:AdvaMedia/GeekBoxTemp.git"
 set :deploy_via, :remote_cache
 
 after "deploy:setup" do
