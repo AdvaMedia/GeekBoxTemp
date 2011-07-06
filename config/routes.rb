@@ -1,7 +1,20 @@
 GeetTmp::Application.routes.draw do
+  
+  match '/auth/:provider/callback' => 'sessions#create'
+
+  match '/signin' => 'sessions#new', :as => :signin
+
+  match '/signout' => 'sessions#destroy', :as => :signout
+
+  match '/auth/failure' => 'sessions#failure'
+  
+  match '/go-out-access-denied' => 'home#fuckoff', :as => :fuckoff
+  
+  match '/admin' => 'admin#index'
 
   scope "/admin" do
     resources :songs
+    match 'contacts' => 'admin#show_contacts', :as=> :contacts
   end
 
   # The priority is based upon order of creation:
@@ -54,7 +67,7 @@ GeetTmp::Application.routes.draw do
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
   root :to => 'home#index'
-  match '/i_want_this' => "home#post_mail", :as=>:postmail
+  match '/i-want-this' => "home#post_mail", :as=>:postmail
 
   # See how all your routes lay out with "rake routes"
 

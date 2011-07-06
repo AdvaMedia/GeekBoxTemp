@@ -1,4 +1,5 @@
 class SongsController < ApplicationController
+  layout "admin"
   # GET /songs
   # GET /songs.json
   def index

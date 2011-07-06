@@ -1,8 +1,9 @@
 %article
 	%p.like-h1.hello= t('hello')
-	- unless session[:registreded]
-		= render 'shared/getmail'
-	- else
-		= render 'shared/registreded'
+	.form-wrap
+		- unless session[:registreded]
+			= render 'shared/getmail'
+		- else
+			= render 'shared/registreded'
 	%p.like-h2{:style=>"font-family:'Indie Flower', arial, serif;"}= t('like2')
-	.ui360.ui360-vis= link_to "#{@song.title} - #{@song.author}", @song.content.url unless @song.blank?
+	.ui360.ui360-vis= link_to "#{@song.author} - #{@song.title}", @song.content.url unless @song.blank?

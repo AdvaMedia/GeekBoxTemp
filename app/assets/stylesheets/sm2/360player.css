@@ -134,14 +134,14 @@
   "fake" button shown before SM2 has started, non-JS/non-SM2 case etc.
   background image will be removed via JS, in threeSixyPlayer.init()
  */
- background:transparent url(360-button-play.png) no-repeat 14px 50%;
- _background:transparent url(360-button-play.gif) no-repeat 14px 50%; /* IE 6-only: special crap GIF */
+ background:transparent url(/images/360-button-play.png) no-repeat 14px 50%;
+ _background:transparent url(/images/360-button-play.gif) no-repeat 14px 50%; /* IE 6-only: special crap GIF */
 }
 
 .ui360 .sm2-360btn-default,
 .ui360 .sm2-360ui.sm2_paused .sm2-360btn {
- background:transparent url(360-button-play.png) no-repeat 50% 50%;
- _background:transparent url(360-button-play.gif) no-repeat 50% 50%; /* IE 6-only: special crap GIF */
+ background:transparent url(/images/360-button-play.png) no-repeat 50% 50%;
+ _background:transparent url(/images/360-button-play.gif) no-repeat 50% 50%; /* IE 6-only: special crap GIF */
 }
 
 .ui360 .sm2-360btn-default,
@@ -151,15 +151,15 @@
 
 .ui360 .sm2-360btn-default:hover,
 .ui360 .sm2-360ui.sm2_paused .sm2-360btn:hover {
- background:transparent url(360-button-play-light.png) no-repeat 50% 50%;
- _background:transparent url(360-button-play.gif) no-repeat 50% 50%;
+ background:transparent url(/images/360-button-play-light.png) no-repeat 50% 50%;
+ _background:transparent url(/images/360-button-play.gif) no-repeat 50% 50%;
  cursor:pointer;
 }
 
 .ui360 .sm2-360ui.sm2_playing .sm2-360btn:hover,
 .ui360 .sm2-360btn-playing:hover {
- background:transparent url(360-button-pause-light.png) no-repeat 50% 50%;
- _background:transparent url(360-button-pause-light.gif) no-repeat 50% 50%;
+ background:transparent url(/images/360-button-pause-light.png) no-repeat 50% 50%;
+ _background:transparent url(/images/360-button-pause-light.gif) no-repeat 50% 50%;
  cursor:pointer;
 }
 
@@ -194,7 +194,7 @@
 
 .ui360 .sm2-360ui.sm2_buffering .sm2-360btn,
 .ui360 .sm2-360ui.sm2_buffering .sm2-360btn:hover {
-  background:transparent url(icon_loading_spinner.gif) no-repeat 50% 50%;
+  background:transparent url(/images/icon_loading_spinner.gif) no-repeat 50% 50%;
   opacity:0.5;
   visibility:visible;
 }

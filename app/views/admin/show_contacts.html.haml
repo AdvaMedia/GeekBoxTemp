@@ -1,0 +1,5 @@
+%h2 Potential clients:
+
+%ul
+	- Contact.all.each do |contact|
+		%li= "#{contact.mail} (#{contact.created_at})"

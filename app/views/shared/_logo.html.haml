@@ -1,4 +1,4 @@
 %h1.logo
-	= link_to root_path, :rel=>"home" do
-		= image_tag "logo-geekbox_blue.png", :title=>raw(t('logo.image.title')), :alt=>t('logo.image.alt')
+	= link_to root_path do
+		= image_tag '/images/logo.png', :title=>raw(t('logo.image.title')), :alt=>t('logo.image.alt')
 		%span= raw t('logo.description')

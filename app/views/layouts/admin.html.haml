@@ -1,0 +1,15 @@
+!!! 5
+%html
+	%head
+		= render 'shared/admin_header'
+	%body
+		%section
+			%header
+				= render "shared/logo"
+				= render "shared/wtf"
+				= link_to t('twitter.name') ,t('twitter.url'), :title=>t('twitter.title'), :class=>"twitter"
+			%span
+				- if user_signed_in?
+					= "#{t("admin_hello#{Kernel.rand(5)}")}, #{current_user.name}!"
+					= link_to t('sign_out'), '/signout'
+			= yield

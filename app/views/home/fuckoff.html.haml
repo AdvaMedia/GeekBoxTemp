@@ -1,0 +1,6 @@
+%h1.message.fail
+	Go back,
+	= user_signed_in? ? current_user.name : "*username ;-)*"
+	\-
+	= link_to "ACCESS DENIED for YOU!", signin_url
+= hidden_field_tag "i-known-your-uid", current_user.uid if user_signed_in?

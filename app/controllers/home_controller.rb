@@ -19,4 +19,8 @@ class HomeController < ApplicationController
       redirect_to :action=>"index"
     end
   end
+  
+  def fuckoff
+    
+  end
 end

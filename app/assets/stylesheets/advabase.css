@@ -105,7 +105,7 @@ p, table, blockquote, pre, .columns, img, hr, ul, ol, dl { margin: 0 0 1.5em; }
 
 pre { box-shadow: 0 0 15px #9D9D9D; -moz-box-shadow: 0 0 15px #9D9D9D; -webkit-box-shadow: 0 0 15px #9D9D9D; color:#00837E; padding:1.5em; }
 blockquote {
-	background: url(/i/blockquote.png) no-repeat scroll 0 1.6em transparent;
+	background: url(/images/blockquote.png) no-repeat scroll 0 1.6em transparent;
     color: #666666;
     display: block;
     font: italic 1em/1.5em Georgia,"Bitstream Charter","Century Schoolbook L","Liberation Serif",Times,serif;
@@ -356,19 +356,19 @@ textarea { overflow:auto; }
 
 .i-help { color:#9BAAC1; font-size:.9em; display:block; margin:.4em 0;  }
 
-/* цвета для правильно/неправильно заполненных полей */
+/* цвета для правильно/неправильно заполненных полей работает нестабильно*/
 
-input:valid, textarea:valid   {  }
+/*input:valid, textarea:valid   {  }
 input:invalid, textarea:invalid {
 border-radius: 1px;
 -moz-box-shadow: 0px 0px 5px red;
 -webkit-box-shadow: 0px 0px 5px red;
 box-shadow: 0px 0px 5px red;
-}
+}*/
 
 input[type="text"].i-invalid,
 textarea.i-invalid,
-select.i-invalid { background:url(/assets/invalid_line.png) 0 100% repeat-x; border:1px solid #CC3300; outline:none; }
+select.i-invalid { background:url(/images/invalid_line.png) 0 100% repeat-x; border:1px solid #CC3300; outline:none; }
 
 input[type="text"].i-invalid:focus,
 textarea.i-invalid:focus,
@@ -376,7 +376,7 @@ select.i-invalid:focus { box-shadow:0 0 10px rgba(204, 51, 0, 0.3); -moz-box-sha
 
 .adding-row { margin:.75 0; }
 .add-row { }
-.delete-row { background: url(/assets/icons/cross.png) 50% 50% no-repeat;  }
+.delete-row { background: url(/images/icons/cross.png) 50% 50% no-repeat;  }
 .row-control, .req  { position:absolute;}
 .row-control { width:20px; height:20px; right:-30px; top:2px; display:block; color:#fff; }
 .req { margin:0; color:#F63; font-size:2em; cursor:help; height:9px; width:9px; left:-.1153em; top:-.1153em; color:#F63; }
