@@ -12,6 +12,7 @@ html {
   min-height:100%; 
   height:100%; 
   position:relative;
+  background:#fafafa;
 }
 body { 
   color:#4E5156; font-family:"Helvetica Neue",Helvetica,Arial,FreeSans,"Liberation Sans","Nimbus Sans L",sans-serif; 
@@ -29,12 +30,11 @@ header { padding-top:3em; position:relative; z-index: 10; }
   a.logo { width:18.5em; /* 259px/14px */ }
   .logo img { margin:0; max-width:100%; height:auto; }
   .logo span { position:absolute; top:-500em; }
-  .wtf { max-width:230px; position:absolute; right:8em; top:4.2em; padding:.5em 1em; background:#fafafa; background:rgba(248, 255, 181,.9); color:#000; }
+  .wtf { max-width:230px; position:absolute; right:8em; top:1.2em; padding:.5em 1em; background:#fafafa; background:rgba(248, 255, 181,.9); color:#000; }
   .wtf .magic { display:none;  }
   .wtf:hover .magic { display:inline; }
-  .twitter, .facebook { position:absolute; top:4.2em; display:block; overflow:hidden; padding:.5em 1em; text-decoration:none; }
+  .twitter, .facebook { position:absolute; top:1.2em; display:block; overflow:hidden; padding:.5em 1em; text-decoration:none; }
   .twitter { right:0; background:url(/images/twitter.png)0 50% no-repeat; padding-left:30px; color:#b3b3b3; }
-  .addthis_toolbox addthis_default_style { position:absolute; } 
   .hello { width:90%; font-family: 'Lobster', arial, serif; text-shadow:0 1px #fff; background:#fafafa; background:rgba(250,250,250,.8); line-height:1.275em; display:inline; }
   .form-wrap { padding:3em 0; position:relative; }
   form { margin:0; padding:0; position:relative; }
@@ -47,4 +47,5 @@ input.mail { font-size:2em; padding:.12em; width:60%; }
 
 .counter { position:absolute; right:0; top:2.8em; text-align:center; color:#fff; text-shadow: 1px 1px #777; }
 .counter .num { font-size:3.5em; display:block; line-height:1; }
-.button{ font-size:2em; font-family: 'Lobster', arial, serif; text-shadow:0 1px #fff; vertical-align: middle; }
+.button { font-size:2em; font-family: 'Lobster', arial, serif; text-shadow:0 1px #fff; vertical-align: middle; }
+.opera .button { padding:.3em; }
