@@ -6,8 +6,9 @@
 	%body
 		%section
 			%header
-				= render "shared/logo"
-				= render "shared/wtf"
-				= link_to t('twitter.name') ,t('twitter.url'), :title=>t('twitter.title'), :class=>"twitter"
+				.page-margin
+					= render "shared/logo"
+					= render "shared/wtf"
+					= link_to t('twitter.name') ,t('twitter.url'), :title=>t('twitter.title'), :class=>"twitter"
 			= yield
 		= render 'shared/analitika'

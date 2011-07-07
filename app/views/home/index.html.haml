@@ -1,9 +1,10 @@
 %article
-	%p.like-h1.hello= t('hello')
-	.form-wrap
-		- unless session[:registreded]
-			= render 'shared/getmail'
-		- else
-			= render 'shared/registreded'
-	%p.like-h2{:style=>"font-family:'Indie Flower', arial, serif;"}= t('like2')
-	.ui360.ui360-vis= link_to "#{@song.author} - #{@song.title}", @song.content.url unless @song.blank?
+	.page-margin
+		%p.like-h1.hello= t('hello')
+		.form-wrap
+			- unless session[:registreded]
+				= render 'shared/getmail'
+			- else
+				= render 'shared/registreded'
+		%p.like-h2{:style=>"font-family:'Indie Flower', arial, serif;"}= t('like2')
+		.ui360.ui360-vis= link_to "#{@song.author} - #{@song.title}", @song.content.url unless @song.blank?
