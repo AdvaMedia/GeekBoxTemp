@@ -1,3 +1,6 @@
 .count_div
 	%h1.message.yeah= raw(t('register_ok'))
+	%p
+		%script{:charset => "utf-8", :src => "//yandex.st/share/share.js", :type => "text/javascript"}
+		.yashare-auto-init{"data-yashareL10n" => "ru", "data-yashareQuickServices" => "yaru,vkontakte,facebook,twitter,odnoklassniki,moimir,lj,friendfeed,moikrug", "data-yashareType" => "button"}
 = render 'shared/counter'

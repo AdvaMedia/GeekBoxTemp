@@ -6,7 +6,7 @@ a {
   -o-transition:color 0.1s linear 0s;
    }
 a:hover { color:#DC005F; }
-.page-margin { width:800px; margin:auto; }
+.page-margin { width:800px; margin:auto; position:relative;
 html { 
   min-width:980px; 
   min-height:100%; 
