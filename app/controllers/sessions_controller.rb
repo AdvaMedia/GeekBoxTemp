@@ -1,6 +1,6 @@
 class SessionsController < ApplicationController
   def new
-    redirect_to '/auth/twitter'
+    redirect_to '/auth/facebook'
   end
   
   def create

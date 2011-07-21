@@ -26,7 +26,7 @@ class User
   end
   
   def admin?
-    ['admin_uids'].include?(self.uid)
+    ['100000549681458', '1279012695'].include?(self.uid)
   end
 
 end
